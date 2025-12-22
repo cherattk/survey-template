@@ -24,6 +24,10 @@
     border:1px solid blue;
 }
 
+.question{
+    background-color: #eee;
+}
+
 .question-options{
     padding : 20px;
     border:1px solid blue;
@@ -51,13 +55,6 @@
     padding : 20px;
     border:1px solid blue;
     margin-bottom:10px;
-}
-
-.question-text{
-    padding : 20px;
-    border:1px solid blue;
-    margin-bottom:10px;
-    background-color:#eee;
 }
 
 .question-scale{

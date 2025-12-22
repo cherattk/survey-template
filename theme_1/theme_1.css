@@ -1,0 +1,196 @@
+body{
+    background-color:#f0f4f7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+}
+
+.survey-page{
+    padding:20px;
+    box-sizing: border-box;
+    margin:50px auto;
+    background-color:#fff;
+    border:1px solid #ccc;
+    box-shadow:0px 2px 5px #ccc;
+}
+
+.survey-header{
+    margin-bottom:20px;
+}
+
+.survey-title{
+    padding : 20px;    
+    margin:0px;
+    background-color:#e1eef8;
+    font-size:23px;
+}
+
+.survey-description{
+    padding : 20px;
+    margin:0px;
+}
+
+.question-list{
+    
+}
+
+.question{
+    margin-bottom:50px;
+    padding-bottom:50px;
+    border-bottom:3px solid #ccc;
+}
+
+.question-text{
+    padding :15px;
+    margin:0 0 10px 0;
+    background-color:#e1eef8;
+}
+
+.question-options{
+    padding:0px;
+    list-style-type:none;
+    margin:0px;
+}
+
+.question-list-option{
+    padding :0px;
+    border-bottom:1px dashed #ccc;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.question-list-option:hover{
+    cursor:pointer;
+    background-color:#eee;
+}
+
+.question-list-option > input[type="radio"],
+.question-list-option > input[type="checkbox"]{
+    margin:0px 10px 0px 20px;
+    display:none;
+}
+.question-list-option > input[type="radio"]:checked + label,
+.question-list-option > input[type="checkbox"]:checked + label{
+    background-colo:#f1f0f9;
+}
+.question-list-option > input[type="radio"]:checked + label:before,
+.question-list-option > input[type="checkbox"]:checked + label:before{
+    visibility:visible;
+}
+.question-list-option > label{
+    padding :10px;
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+.question-list-option > label:hover{
+    cursor:pointer;
+    background-color:#f1f0f9;
+}
+.question-list-option > label:before{
+    padding:0px;
+    margin:0px 10px 0px 0px;
+    content:"\2713";
+    visibility:hidden;
+    color:#0000ff;
+    border-radius:5px;
+    font-size:20px;
+}
+
+.question-scale{
+    /* margin-bottom:10px; */
+    padding-top:10px;
+}
+
+.question-scale-content{
+    /**/
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;       /* This is the key fix */
+    justify-content: center; /* Keeps items centered as they wrap */
+    gap:10px;             /* Adds space between the boxes */
+}
+
+.question-scale-value{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;       /* This is the key fix */
+    justify-content: center;
+}
+.question-scale-value input{
+    display:none;
+}
+.question-scale-value input:checked + label{
+    background-color:#0000ff;
+    color:#fff;
+    border-color:#0000ff;
+}
+.question-scale-value label{
+    width:50px;
+    display:inline-block;
+    text-align:center;
+    padding:10px 0px;
+    margin:0px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+.question-scale-value label:hover{
+   cursor:pointer;
+    background-color:#eee;
+}
+
+/*** ***/
+.submit-survey-container{
+    padding : 10px;
+    margin-bottom:10px;
+}
+
+.submit-survey-button{
+    padding :10px;
+    width:100%;
+    font-weight:bold;
+    background-color:#58c858;
+    border:1px solid #53b953;
+    color:#fff;
+    box-shadow:0px 1px 5px #16ab168a;
+    border-radius:3px;
+}
+.submit-survey-button:hover{
+    cursor:pointer;
+    background-color:#51ad51;
+}
+
+
+/********************
+ screen breakpoints
+*********************/
+
+/* 2. Small Devices (Landscape Phones: 576px and up) */
+@media (min-width: 576px) {
+  
+}
+
+/* 3. Medium Devices (Tablets: 768px and up) */
+@media (min-width: 768px) {
+  .survey-page{
+      max-width:800px;
+  }
+ 
+}
+
+/* 4. Large Devices (Desktops: 992px and up) */
+@media (min-width: 992px) {
+ 
+}
+
+/* 5. Extra Large (Large Desktops: 1200px and up) */
+@media (min-width: 1200px) {
+  
+}
+
+/* 6. Extra Extra Large (Larger Desktops: 1400px and up) */
+@media (min-width: 1400px) {
+  
+}
