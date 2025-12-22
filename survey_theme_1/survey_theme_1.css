@@ -1,0 +1,96 @@
+.survey-page{
+    padding : 20px;
+    border:1px solid blue;
+}
+
+.survey-header{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:20px;
+}
+
+.survey-title{
+    padding : 20px;
+    border:1px solid blue;
+}
+
+.survey-description{
+    padding : 20px;
+    border:1px solid blue;
+}
+
+.question-list{
+    padding : 20px;
+    border:1px solid blue;
+}
+
+.question-options{
+    padding : 20px;
+    border:1px solid blue;
+    list-style-type:none;
+}
+
+.question-list-option{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:10px;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.question-list-option > label{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:10px;
+}
+
+.question-text{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:10px;
+}
+
+.question-text{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:10px;
+    background-color:#eee;
+}
+
+.question-scale{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:10px;
+}
+
+.question-scale-content{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:10px;
+
+    /**/
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.question-scale-value{
+    padding : 5px 10px;
+    border:1px solid blue;
+    margin-bottom:10px;
+}
+
+.submit-survey-container{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:10px;
+}
+
+.submit-survey-button{
+    padding : 20px;
+    border:1px solid blue;
+    margin-bottom:10px;
+}
