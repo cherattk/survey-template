@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0 auto;
+}
+
+.home-page{
+    width:70%;
+    margin:auto;
+    padding:20px;
+}
+
+.list-survey {
+    list-style: none;
+    padding: 0;
+    margin: 0px auto;
+    /* Changed from max-width to 50% width */
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.list-survey li {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.list-survey li:last-child {
+    border-bottom: none;
+}
+
+.list-survey a {
+    display: block;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect */
+.list-survey a:hover {
+    background-color: #f7fafc;
+    color: #3182ce;
+    padding-left: 32px; /* Slight slide effect */
+}
+
+/* Left indicator on hover */
+.list-survey a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #3182ce;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.list-survey a:hover::before {
+    transform: scaleY(1);
+}

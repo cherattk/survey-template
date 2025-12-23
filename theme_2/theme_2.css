@@ -1,0 +1,175 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.survey-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Header Row Styling */
+.question-list-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #2d3748;
+    margin-bottom: 10px;
+    gap: 30px;
+}
+
+.header-item {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #718096;
+}
+
+.question-col { flex: 1; }
+.rating-col { flex: 2; }
+
+/* Horizontal Layout for Questions */
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #edf2f7;
+    gap: 30px;
+}
+
+.question-text {
+    flex: 1;
+    margin: 0;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Hide native inputs */
+.question-radio, 
+.question-checkbox, 
+.question-scale-value input {
+    display: none;
+}
+
+/* Options Container */
+.question-options {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+}
+
+/* Label styled as Button */
+.question-list-option label,
+.question-scale-value label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    color: #4a5568;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+/* Hover state */
+.question-list-option label:hover,
+.question-scale-value label:hover {
+    border-color: #cbd5e0;
+    background-color: #f7fafc;
+}
+
+/* Clicked/Checked state */
+.question-radio:checked + label,
+.question-checkbox:checked + label,
+.question-scale-value input:checked + label {
+    background-color: #3182ce;
+    border-color: #3182ce;
+    color: white;
+}
+
+/* Scale (1-10) Layout */
+.question-scale {
+    flex: 2;
+}
+
+.question-scale-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.question-scale-value label {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Submit Button */
+.submit-survey-container {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.submit-survey-button {
+    background-color: #2d3748;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.submit-survey-button:hover {
+    background-color: #1a202c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .survey-page {
+        padding: 20px;
+    }
+
+    .question-list-header {
+        display: none; /* Hide headers on mobile as layout becomes vertical */
+    }
+
+    .question {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .question-text, .question-options, .question-scale {
+        flex: none;
+        width: 100%;
+    }
+
+    .question-scale-content {
+        flex-wrap: wrap; /* Allow numbers to wrap if screen is very narrow */
+        justify-content: flex-start;
+        gap: 8px;
+    }
+}
