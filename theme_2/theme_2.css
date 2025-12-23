@@ -7,7 +7,6 @@ body {
 }
 
 .survey-page {
-    max-width: 1000px;
     margin: 0 auto;
     background: white;
     padding: 40px;
@@ -15,7 +14,6 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* Header Row Styling */
 .question-list-header {
     display: flex;
     justify-content: space-between;
@@ -36,12 +34,11 @@ body {
 .question-col { flex: 1; }
 .rating-col { flex: 2; }
 
-/* Horizontal Layout for Questions */
 .question {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 25px 0;
     border-bottom: 1px solid #edf2f7;
     gap: 30px;
 }
@@ -53,14 +50,10 @@ body {
     color: #2d3748;
 }
 
-/* Hide native inputs */
-.question-radio, 
-.question-checkbox, 
-.question-scale-value input {
+.question-radio, .question-checkbox, .question-scale-value input {
     display: none;
 }
 
-/* Options Container */
 .question-options {
     flex: 2;
     display: flex;
@@ -71,9 +64,7 @@ body {
     gap: 8px;
 }
 
-/* Label styled as Button */
-.question-list-option label,
-.question-scale-value label {
+.question-list-option label {
     display: inline-block;
     padding: 8px 16px;
     background-color: #fff;
@@ -82,19 +73,55 @@ body {
     color: #4a5568;
     cursor: pointer;
     font-weight: 500;
-    font-size: 14px;
     transition: all 0.2s ease;
-    user-select: none;
 }
 
-/* Hover state */
-.question-list-option label:hover,
-.question-scale-value label:hover {
-    border-color: #cbd5e0;
-    background-color: #f7fafc;
+/* Scale styling as Rectangles */
+.question-scale {
+    flex: 2;
 }
 
-/* Clicked/Checked state */
+.question-scale-content {
+    display: flex;
+    gap: 5px;
+}
+
+.question-scale-value {
+    flex: 1;
+}
+
+.question-scale-value label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    background-color: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px; /* Rectangle style */
+    color: #4a5568;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    min-height: 50px;
+    text-align: center;
+}
+
+.value-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-top: 10px;
+    color: inherit;
+    text-align:center;
+    display:block;
+}
+
+.value-num {
+    font-size: 16px;
+}
+
+/* Checked States */
 .question-radio:checked + label,
 .question-checkbox:checked + label,
 .question-scale-value input:checked + label {
@@ -103,28 +130,6 @@ body {
     color: white;
 }
 
-/* Scale (1-10) Layout */
-.question-scale {
-    flex: 2;
-}
-
-.question-scale-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 4px;
-}
-
-.question-scale-value label {
-    width: 36px;
-    height: 36px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-/* Submit Button */
 .submit-survey-container {
     margin-top: 40px;
     text-align: right;
@@ -139,37 +144,12 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    transition: background 0.2s;
 }
 
-.submit-survey-button:hover {
-    background-color: #1a202c;
-}
-
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .survey-page {
-        padding: 20px;
-    }
-
-    .question-list-header {
-        display: none; /* Hide headers on mobile as layout becomes vertical */
-    }
-
-    .question {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .question-text, .question-options, .question-scale {
-        flex: none;
-        width: 100%;
-    }
-
-    .question-scale-content {
-        flex-wrap: wrap; /* Allow numbers to wrap if screen is very narrow */
-        justify-content: flex-start;
-        gap: 8px;
-    }
+    .question { flex-direction: column; gap: 15px; }
+    .question-list-header { display: none; }
+    .question-scale-content { flex-wrap: wrap; }
+    .question-scale-value { flex: none; width: calc(20% - 5px); }
+    .question-scale-value:first-child, .question-scale-value:last-child { width: 100%; }
 }
